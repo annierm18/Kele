@@ -1,6 +1,7 @@
+require "kele/version"
+
 class Kele
     include HTTParty
-    require "kele/version"
 
     def initialize(email, password)
         @options = {query: {email: email, password: password}}

@@ -5,6 +5,8 @@ class Kele
     include Roadmap
 
 
+
+
   def initialize(email, password)
     @base_url = 'https://www.bloc.io/api/v1'
     @options = {query: {email: email, password: password}}

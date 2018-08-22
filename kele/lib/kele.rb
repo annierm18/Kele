@@ -4,7 +4,9 @@ class Kele
     include HTTParty
     include Roadmap
 
+
     def initialize(email, password)
+        @base_url = 'https://www.bloc.io/api/v1'
         @options = {query: {email: email, password: password}}
         response = self.class.post("https://www.bloc.io/api/v1/sessions", @options)
         @auth_token = response["auth_token"]
